@@ -4,17 +4,18 @@ import { SectionBadge } from './SectionBadge';
 import { MapPin, Briefcase, Heart, Download } from 'lucide-react';
 
 export const About: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const cvFile = language === "sv" ? "/QusaiKetahCV.pdf" : "/EngCv.pdf"
 
   return (
     <section id="about" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionBadge text={t('ui.sectionBadges.about')} />
-        
+
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
           {t('ui.nav.1')}
         </h2>
-        
+
         {/* Text OUTSIDE the bubbles stays default (black in light, near-white in dark) */}
         <p className="text-lg text-foreground/80 max-w-4xl mb-12 leading-relaxed">
           {t('bio')}
@@ -57,10 +58,15 @@ export const About: React.FC = () => {
           </div>
         </div>
 
-        <button className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-glow-md transition-all duration-300 flex items-center space-x-2">
+        <a
+          href={cvFile}
+          download
+          className="px-4 py-2 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-glow-md transition-all duration-300 inline-flex justify-center items-center space-x-2"
+        >
           <Download className="w-5 h-5" />
           <span>{t('ui.buttons.downloadCV')}</span>
-        </button>
+        </a>
+
       </div>
     </section>
   );
