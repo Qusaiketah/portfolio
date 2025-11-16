@@ -86,7 +86,7 @@ export const translations = {
     contact: {
       email: "qketah@gmail.com",
       linkedin: "https://www.linkedin.com/in/qusai-ketah-40226b205",
-      github: "https://github.com/"
+      github: "https://github.com/Qusaiketah"
     },
     ui: {
       nav: ["Home", "About", "Skills", "Projects", "Experience", "Education", "Contact"],
@@ -200,7 +200,7 @@ export const translations = {
     contact: {
       email: "qketah@gmail.com",
       linkedin: "https://www.linkedin.com/in/qusai-ketah-40226b205",
-      github: "https://github.com/"
+      github: "https://github.com/Qusaiketah"
     },
     ui: {
       nav: ["Hem", "Om", "Kompetenser", "Projekt", "Erfarenhet", "Utbildning", "Kontakt"],
